@@ -1,0 +1,66 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: 0;
+}
+.heart{
+  position: absolute;
+  margin:auto;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  background-color:#FF66B2;
+  height:50px;
+  width: 50px;
+  transform: rotate(315deg);
+  animation-name: beat;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.heart::after{
+  background-color:#FF66B2;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width:50px;
+  height: 50px;
+  top:0;
+  left: 25px;
+}
+
+.heart::before{
+  content: " ";
+  position: absolute;
+  background-color:#FF66B2;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  left:0;
+  top:-25px;
+}
+
+#rect{
+  animation-name: raww;
+  animation-duration: 15s;
+}
+@keyframes raww{
+0%{background-color: blue;}
+25%{background-color: red;}
+50%{background-color: green;}
+75%{background-color: purple;}
+100%{background-color: gold;}
+
+}
+
+
+
+@keyframes beat {
+   0% {
+     transform: scale(1) rotate(-45deg);
+   }
+   50% {
+     transform: scale(0.6) rotate(-45deg);
+   }
+ }
